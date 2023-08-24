@@ -40,7 +40,7 @@ public class SecurityConfiguration {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/api/books/secure/**")
+                        .requestMatchers("/api/books/secure/**","/api/reviews/secure/**")
                         .authenticated()
                         .anyRequest()
                         .permitAll()
